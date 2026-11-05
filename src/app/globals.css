@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #090909;
+  --foreground: #f4f4f5;
+  --brand-green: #00F59B;
+  --brand-green-glow: rgba(0, 245, 155, 0.4);
+}
+
+html {
+  background-color: #090909;
+  color: #f4f4f5;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Lenis smooth scrolling rules */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+body {
+  background-color: #090909;
+  color: #ededed;
+  overflow-x: hidden;
+  selection-background-color: #00F59B;
+  selection-color: #090909;
+}
+
+::selection {
+  background: #00F59B;
+  color: #090909;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090909;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00F59B;
+}
+
+/* Cinematic glows and typography */
+.text-glow-green {
+  text-shadow: 0 0 20px rgba(0, 245, 155, 0.6), 0 0 40px rgba(0, 245, 155, 0.3);
+}
+
+.text-glow-white {
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+.box-glow-green {
+  box-shadow: 0 0 35px -5px rgba(0, 245, 155, 0.35);
+}
+
+.box-glow-green-intense {
+  box-shadow: 0 0 60px -5px rgba(0, 245, 155, 0.6);
+}
+
+/* Subtle Film Grain Effect */
+.bg-noise {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Cinematic gradient masks */
+.mask-radial-faded {
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+.mask-linear-bottom {
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
