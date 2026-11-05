@@ -98,3 +98,17 @@ body {
 .mask-linear-bottom {
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
+
+/* Masquer les badges et tiroirs injectés par Netlify */
+[data-netlify-badge],
+.netlify-badge,
+netlify-drawer,
+#netlify-drawer,
+[id*="netlify-cdp"],
+iframe[title*="Netlify" i],
+a[href*="netlify.com"][target="_blank"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
